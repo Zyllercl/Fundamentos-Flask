@@ -1,0 +1,26 @@
+<!-- Herencia de una plantilla base (layout.html) -->
+{% extends './layout.html' %}
+
+<!-- Bloque titulo -->
+{% block title %}
+    {{ data.titulo }}
+{% endblock %}
+
+<!-- Bloque Body -->
+{% block body %}
+    <h1>Fundamentos Flask</h1>
+    <h2>{{ data.mensaje }}</h2>
+
+    {% if data.numero_cursos > 0 %}
+        <ul>
+            <!-- Iteracion de un arreglo con jinja2 -->
+            {% for c in data.cursos %}
+                <li>
+                    {{ c }}
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <h3>No se encontraron cursos</h3>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,13 @@
+<!-- Herencia de una plantilla base (layout.html) -->
+{% extends './layout.html' %}
+
+<!-- Bloque titulo -->
+{% block title %}
+    {{ data.titulo }}
+{% endblock %}
+
+<!-- Bloque Body -->
+{% block body %}
+    <h1>Nombre usuario: {{ data.nombre }}</h1>
+    <h1>Edad usuario: {{ data.edad }}</h1>
+{% endblock %}
